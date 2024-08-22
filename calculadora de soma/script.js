@@ -1,18 +1,16 @@
 prompt = require("prompt-sync")();
 
 console.log("Bem-vindo a calculadora");
-
-let numOperacoes = prompt("Digite quantas somas você quer fazer ");
-parseFloat(numOperacoes);
-
+let numOperacoes = parseInt(prompt("Digite quantas somas você quer fazer "));
 let nums = 0;
 let resultado = 0;
 
-function calcs(number) {
-    let soma = resultado + number;
+// primeira tentativa
+/* function calcs(number) {
+     let soma = resultado + number;
 
-    resultado = soma;
-}
+     resultado = soma;
+    } */
 
 while(nums != numOperacoes) {
     let numTemp = null;
@@ -23,7 +21,7 @@ while(nums != numOperacoes) {
         console.log("Por favor insira um número válido")
     }
     else {
-        calcs(numTemp);
+        resultado += numTemp;
         ++nums;
     }
 }
