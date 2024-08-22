@@ -2,8 +2,9 @@ prompt = require("prompt-sync")();
 
 console.log("Bem-vindo a calculadora");
 let numOperacoes = parseInt(prompt("Digite quantas somas você quer fazer "));
-let nums = 0;
 let resultado = 0;
+let numsArray = [];
+
 
 // primeira tentativa
 /* function calcs(number) {
@@ -12,7 +13,8 @@ let resultado = 0;
      resultado = soma;
     } */
 
-while(nums != numOperacoes) {
+
+for(let i = 0; i != numOperacoes; i++) {
     let numTemp = null;
     
     numTemp = parseFloat(prompt("digite um número ")); 
@@ -22,8 +24,8 @@ while(nums != numOperacoes) {
     }
     else {
         resultado += numTemp;
-        ++nums;
+        numsArray.push(numTemp);
     }
 }
 
-console.log(resultado);
+console.log(resultado + ". todos os números: " + numsArray);
